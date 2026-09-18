@@ -1,13 +1,4 @@
 /*
-Write a program that will exercise STD::array functions. 
-Code a real-world simulation of something that could be simulated by an array. 
-The requirements are:
-
-- Use an STD::array
-- Have an external data file with at least 30 elements in it
-- Read the data into an STD::array 
-- Use a large variety of the <array> member functions from this module 
-  to demonstrate your understanding of the STD::array.
 - Then, as a second part of the same program (do not write another script please), 
   essentially duplicate your existing code, adapting it to feature the STD::vector.
 */
@@ -92,7 +83,7 @@ int main(){
 
         //Create temporary arrays to fill()
         array<string, 3> tempHeroes1;
-        array<string, 5> tempHeroes2;
+        array<string, 3> tempHeroes2;
 
         tempHeroes1.fill("Spider-Man");
         tempHeroes2.fill("Miles Morales");
@@ -110,8 +101,14 @@ int main(){
         }
         cout << endl;
 
+        //Swappage
+        tempHeroes1.swap(tempHeroes2);
 
-
+        cout << "14. Swapped; the Spider-Man array now holds: ";
+        for (string tempHero : tempHeroes1){ 
+            cout << tempHero << " "; 
+        }
+        cout << endl;
 
     }
     else
