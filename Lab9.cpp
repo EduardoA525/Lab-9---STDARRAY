@@ -21,7 +21,11 @@ const int MAX_SIZE = 30;
 
 int main(){
 
+    //Create array for EPIC ARRAYIZATION
     array<string, MAX_SIZE> heroes;
+
+    //Create vector for SUPER VECTORIZATION
+    vector<string> heroesVector;
 
     ifstream fin;
     fin.open("heroes.txt");
@@ -113,6 +117,15 @@ int main(){
     }
     else
         cout << "File not found.\n"; //if text file isn't found
+
+    //Super awesome vector part of the assignment
+
+    ifstream vectorFin;
+    vectorFin.open("heroes.txt");
+
+
+
+
 
     return 0;
 }
