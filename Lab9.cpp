@@ -1,8 +1,3 @@
-/*
-- Then, as a second part of the same program (do not write another script please), 
-  essentially duplicate your existing code, adapting it to feature the STD::vector.
-*/
-
 //Eduardo Avila
 //COMSC - 210 - 5293
 //Lab 9 - STD::Array and STD::Vector
@@ -171,7 +166,7 @@ int main(){
         vector<string>::iterator vectorIt;
         vectorIt = find(heroesVector.begin(), heroesVector.end(), vectorTarget);
 
-        cout << "25. Target: " << vectorTarget;
+        cout << "25. Target Vector: " << vectorTarget;
 
         if (vectorIt != heroesVector.end()){
             cout << " found at position #"
@@ -187,39 +182,30 @@ int main(){
         fill(vecTempHeroes1.begin(), vecTempHeroes1.end(), "Spider-Man");
         fill(vecTempHeroes2.begin(), vecTempHeroes2.end(), "Miles Morales");
 
-        cout << "26. Filled Spider-Man Array: " << endl;
+        cout << "26. Filled Spider-Man VECTOR: " << endl;
 
-        //GOING DOWN THE LIST EDITING THE ARRAY VERSION
-
-        //------------ GIT UPDATE HERE -------------
-
-        for (string tempHero : tempHeroes1){
-            cout << tempHero << " ";
+        for (string vecTempHero : vecTempHeroes1){
+            cout << vecTempHero << " ";
         }
         cout << endl;
 
-        cout << "13. Filled Miles Array: " << endl;
-        for (string tempHero : tempHeroes2){
-            cout << tempHero << " ";
+        cout << "27. Filled Miles VECTOR: " << endl;
+        for (string vecTempHero : vecTempHeroes2){
+            cout << vecTempHero << " ";
         }
         cout << endl;
 
         //Swappage
-        tempHeroes1.swap(tempHeroes2);
+        vecTempHeroes1.swap(vecTempHeroes2);
 
-        cout << "14. Swapped; the Spider-Man array now holds: ";
-        for (string tempHero : tempHeroes1){ 
-            cout << tempHero << " "; 
+        cout << "28. Swapped; the Spider-Man VECTOR now holds: ";
+        for (string vecTempHero : vecTempHeroes1){ 
+            cout << vecTempHero << " "; 
         }
         cout << endl;
-
-
     }
     else
         cout << "File not found.\n";
-
-
-
 
     return 0;
 }
