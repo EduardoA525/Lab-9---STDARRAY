@@ -119,10 +119,39 @@ int main(){
         cout << "File not found.\n"; //if text file isn't found
 
     //Super awesome vector part of the assignment
-
     ifstream vectorFin;
     vectorFin.open("heroes.txt");
 
+    if (vectorFin.good()){
+
+        string hero;
+
+        //While loop to keep adding the heroes in the vector
+        while (getline(vectorFin, hero)){
+            heroesVector.push_back(hero);
+        }
+        vectorFin.close();
+
+        //Demonstrate vector stuff
+        cout << "15. Vector Size: " << heroesVector.size() << endl;
+
+        cout << "16. Hero Names: " << endl;
+        for (string hero : heroesVector){
+            cout << hero << " ";
+        }
+        cout << endl;
+
+        cout << "17. First Hero: " << heroesVector.at(0) << endl;
+        cout << "18. First Hero: " << heroesVector[0] << endl;
+        cout << "19. Front: " << heroesVector.front() << endl;
+        cout << "20. Back: " << heroesVector.back() << endl;
+        cout << "21. Empty? " << (heroesVector.empty() == 0 ? "False" : "True") << endl;
+        cout << "22. Address: " << heroesVector.data() << endl;
+
+
+    }
+    else
+        cout << "File not found.\n";
 
 
 
