@@ -20,6 +20,7 @@ The requirements are:
 #include <fstream>
 #include <string>
 #include <array>
+#include <algorithm> //for sort() and find()
 
 using namespace std;
 
@@ -55,6 +56,39 @@ int main(){
         cout << "5. Front: " << heroes.front() << endl;
         cout << "6. Back: " << heroes.back() << endl;
         cout << "7. Empty? " << (heroes.empty() == 0 ? "False" : "True") << endl;
+        cout << "8. Address: " << heroes.data() << endl;
+
+        //Epic <algorithm> time
+        sort(heroes.begin(), heroes.end());
+
+        cout << "9. Sorted A-Z: " << endl;
+        for (string hero : heroes){
+            cout << hero << " ";
+        }
+        cout << endl;
+
+        sort(heroes.rbegin(), heroes.rend());
+
+        cout << "10. Sorted Z-A: " << endl;
+        for (string hero : heroes){
+            cout << hero << " ";
+        }
+        cout << endl;
+
+        //Set up for find()
+        string target = "Daredevil";
+
+        array<string, MAX_SIZE>::iterator it;
+        it = find(heroes.begin(), heroes.end(), target);
+
+        cout << "11. Search For: " << target << endl;
+
+        if (it != heroes.end()){
+            //cout << 
+
+        }
+
+
 
 
     }
