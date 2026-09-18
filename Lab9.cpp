@@ -81,12 +81,34 @@ int main(){
         array<string, MAX_SIZE>::iterator it;
         it = find(heroes.begin(), heroes.end(), target);
 
-        cout << "11. Search For: " << target << endl;
+        cout << "11. Target: " << target;
 
         if (it != heroes.end()){
-            //cout << 
-
+            cout << " found at position #"
+                 << it - heroes.begin() << endl;
         }
+        else
+            cout << " not found!" << endl;
+
+        //Create temporary arrays to fill()
+        array<string, 3> tempHeroes1;
+        array<string, 5> tempHeroes2;
+
+        tempHeroes1.fill("Spider-Man");
+        tempHeroes2.fill("Miles Morales");
+
+        cout << "12. Filled Spider-Man Array: " << endl;
+
+        for (string tempHero : tempHeroes1){
+            cout << tempHero << " ";
+        }
+        cout << endl;
+
+        cout << "13. Filled Miles Array: " << endl;
+        for (string tempHero : tempHeroes2){
+            cout << tempHero << " ";
+        }
+        cout << endl;
 
 
 
