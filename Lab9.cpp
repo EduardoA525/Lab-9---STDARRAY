@@ -12,6 +12,7 @@
 #include <string>
 #include <array>
 #include <algorithm> //for sort() and find()
+#include <vector>
 
 using namespace std;
 
@@ -109,13 +110,9 @@ int main(){
             cout << tempHero << " "; 
         }
         cout << endl;
-
     }
     else
         cout << "File not found.\n"; //if text file isn't found
-
-
-
 
     return 0;
 }
