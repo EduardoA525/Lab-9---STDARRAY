@@ -148,6 +148,71 @@ int main(){
         cout << "21. Empty? " << (heroesVector.empty() == 0 ? "False" : "True") << endl;
         cout << "22. Address: " << heroesVector.data() << endl;
 
+        //Epic VECTOR <algorithm> time
+        sort(heroesVector.begin(), heroesVector.end());
+
+        cout << "23. Sorted A-Z: " << endl;
+        for (string hero : heroesVector){
+            cout << hero << " ";
+        }
+        cout << endl;
+
+        sort(heroesVector.rbegin(), heroesVector.rend());
+
+        cout << "24. Sorted Z-A: " << endl;
+        for (string hero : heroesVector){
+            cout << hero << " ";
+        }
+        cout << endl;
+
+        //Set up for VECTOR find()
+        string vectorTarget = "Daredevil";
+
+        vector<string>::iterator vectorIt;
+        vectorIt = find(heroesVector.begin(), heroesVector.end(), vectorTarget);
+
+        cout << "25. Target: " << vectorTarget;
+
+        if (vectorIt != heroesVector.end()){
+            cout << " found at position #"
+                 << vectorIt - heroesVector.begin() << endl;
+        }
+        else
+            cout << " not found!" << endl;
+
+        //Create temporary VECTORS to fill()
+        vector<string> vecTempHeroes1(3);
+        vector<string> vecTempHeroes2(3);
+
+        fill(vecTempHeroes1.begin(), vecTempHeroes1.end(), "Spider-Man");
+        fill(vecTempHeroes2.begin(), vecTempHeroes2.end(), "Miles Morales");
+
+        cout << "26. Filled Spider-Man Array: " << endl;
+
+        //GOING DOWN THE LIST EDITING THE ARRAY VERSION
+
+        //------------ GIT UPDATE HERE -------------
+
+        for (string tempHero : tempHeroes1){
+            cout << tempHero << " ";
+        }
+        cout << endl;
+
+        cout << "13. Filled Miles Array: " << endl;
+        for (string tempHero : tempHeroes2){
+            cout << tempHero << " ";
+        }
+        cout << endl;
+
+        //Swappage
+        tempHeroes1.swap(tempHeroes2);
+
+        cout << "14. Swapped; the Spider-Man array now holds: ";
+        for (string tempHero : tempHeroes1){ 
+            cout << tempHero << " "; 
+        }
+        cout << endl;
+
 
     }
     else
