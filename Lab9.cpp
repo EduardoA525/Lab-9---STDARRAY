@@ -37,12 +37,26 @@ int main(){
         for (int i = 0; i < MAX_SIZE; i++){
 
             getline(fin, heroes[i]); //Insert each line into an array slot
-            cout << heroes[i] << endl; // test line to make sure it works
         }
-
-
-
         fin.close();
+
+        //Demonstrate member functions
+        cout << "1. Array Size: " << heroes.size() << endl;
+
+        cout << "2. Hero Names: " << endl;
+        for (string hero : heroes){
+            cout << hero << " ";
+        }
+        cout << endl;
+
+        //Using the Lesson Code example as a template :)
+        cout << "3. First Hero: " << heroes.at(0) << endl;
+        cout << "4. First Hero: " << heroes[0] << endl;
+        cout << "5. Front: " << heroes.front() << endl;
+        cout << "6. Back: " << heroes.back() << endl;
+        cout << "7. Empty? " << (heroes.empty() == 0 ? "False" : "True") << endl;
+
+
     }
     else
         cout << "File not found.\n"; //if text file isn't found
